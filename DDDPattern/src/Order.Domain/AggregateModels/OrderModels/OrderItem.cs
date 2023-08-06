@@ -12,5 +12,12 @@ namespace Order.Domain.AggregateModels.OrderModels
         public int Quantity { get; set; }
         public decimal Price { get; set; }
         public Guid ProductId { get; set; }
+
+        public OrderItem(int quantity, decimal price, Guid productId)
+        {
+            Quantity = quantity;
+            Price = price;
+            ProductId = productId;
+        }
     }
 }
