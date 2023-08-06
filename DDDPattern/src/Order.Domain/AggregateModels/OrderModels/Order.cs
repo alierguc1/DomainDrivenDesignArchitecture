@@ -1,4 +1,5 @@
-﻿using Order.Domain.SeedWork;
+﻿using Order.Domain.Events;
+using Order.Domain.SeedWork;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,6 +33,9 @@ namespace Order.Domain.AggregateModels.OrderModels
             BuyerId = buyerId;
             Adress = adress;
             OrderItems = orderItems;
+
+            AddDomainEvents(new OrderStartedDomainEvent("","",this));
+
         }
 
         public void AddOrderItem(int Quantity, decimal Price, Guid ProductId)
