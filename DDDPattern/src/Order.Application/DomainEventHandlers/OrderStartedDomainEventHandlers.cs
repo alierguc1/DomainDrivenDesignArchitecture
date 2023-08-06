@@ -22,7 +22,7 @@ namespace Order.Application.DomainEventHandlers
         {
             if(notification.Order.BuyerId == null)
             {
-                // _buyerRepository.Add(new Buyer())
+                // _buyerRepository.Add(new Buyer(notification.BuyerFirstName, notification.BuyerLastName))
             }
         }
     }

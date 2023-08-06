@@ -9,6 +9,8 @@ namespace Order.Domain.Events
 {
     public class OrderStartedDomainEvent : INotification
     {
+        public string BuyerFirstName { get; set; }
+        public string BuyerLastName { get; set; }
         public AggregateModels.OrderModels.Order Order { get; set; }
     }
 }

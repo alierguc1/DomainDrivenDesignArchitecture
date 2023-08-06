@@ -9,6 +9,7 @@ namespace Order.Domain.AggregateModels.OrderModels
 {
     public class Order : BaseEntity, IAggregateRoot
     {
+
         public DateTime OrderDate { get; private set; }
         public string Description { get; private set; }
         public string OrderStatus { get; private set; }
